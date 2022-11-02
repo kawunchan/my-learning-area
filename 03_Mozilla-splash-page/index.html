@@ -30,17 +30,18 @@
         <!-- 插入包含 srcsets 和 sizes 属性的图像 -->
         <a href="https://www.mozilla.org/zh-CN/firefox/new/">
           <img
-          srcset="images/firfox_logo120.png 120w, images/firefox_logo400.png  400w"
+          srcset="images/firefox_logo120.png 120w, images/firefox_logo400.png  400w"
           sizes="(max-width: 500px) 120px,
           400px"
           src="images/firefox_logo400.png">
         </a>
         <a href="https://www.mozilla.org/">
-          <img
-          srcset="images/firfox-addons120.jpg 120w,
-          images/firefox-addons400.jpg  400w"
-          sizes="(max-width: 500px) 120px, 400px"
-          src="images/firefox-addons400.jpg">
+         
+          <picture>
+            <source media="(min-width:500px)" srcset="images/firefox-addons400.jpg">
+            <source media="(max-width: 499px)" srcset="images/firefox-addons120.jpg">
+            <img src="images/firefox-addons400.jpg" alt="second">
+          </picture>
         </a>
         <a href="https://addons.mozilla.org/">
           <img
